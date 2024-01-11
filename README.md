@@ -8,3 +8,7 @@
 
 - [x] "npx shadcn-ui@latest init" to initialize shadcn
 - [x] html, body, :root { height: 100% } thing at app/globals.css
+
+- [x] "npm i convex"
+- [x] "npx convex dev" to run convex
+- [x] add providers/convex-provider.tsx
