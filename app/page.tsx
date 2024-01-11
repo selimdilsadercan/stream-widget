@@ -1,16 +1,22 @@
-import { User, User2 } from "lucide-react";
+"use client";
+
+import { api } from "@/convex/_generated/api";
+import { useQuery } from "convex/react";
 
 function Page() {
+  const result = useQuery(api.Data.getData);
+  if (!result) return null;
+
+  const data = result[0];
+
   return (
-    <div className="flex flex-col items-start justify-start w-[200px] h-[200px] group">
-      <div className="text-2x">Puan Tablosu</div>
-      <User2 className="hidden group-hover:block" />
-      <div className="text-2x">zSuat</div>
-      <div className="text-2x">OoSee</div>
-      <div className="text-2x">Mr. C</div>
-      <div className="text-2x">BRkyAytr</div>
-      <div className="text-2x">YYYMuh</div>
-      <div className="text-2x">Hilmi</div>
+    <div className="flex flex-col items-start justify-start w-[200px] h-[200px]">
+      <p className="w-fit h-fit font-semibold text-mavi-600 text-xl text-start">{data?.title}</p>
+      {data?.players.map((player) => (
+        <p key={player.name} className="w-fit h-fit font-semibold text-xl text-start" style={{ color: player.color }}>
+          {player.name} : {player.score}
+        </p>
+      ))}
     </div>
   );
 }
