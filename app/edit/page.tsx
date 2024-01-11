@@ -24,7 +24,7 @@ function Page() {
             <p className="w-fit h-fit font-semibold text-mavi-600 text-xl text-start">{data?.title}</p>
             {data?.players.map((player) => (
               <p key={player.name} className="w-fit h-fit font-semibold text-xl text-start" style={{ color: player.color }}>
-                {player.name} : {player.score}
+                {player.name}: {player.score}
               </p>
             ))}
           </div>
