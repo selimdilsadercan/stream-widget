@@ -6,6 +6,8 @@ import { Droppable, DragDropContext, Draggable } from "@hello-pangea/dnd";
 import { api } from "@/convex/_generated/api";
 import { Input } from "@/components/ui/input";
 import TitleArea from "@/components/TitleArea";
+import { TwitterPicker } from "react-color";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 
 function Page() {
   const result = useQuery(api.Data.getData);
@@ -65,7 +67,14 @@ function Page() {
                               <Grip size={20} />
                             </div>
 
-                            <div className="w-[12px] h-[12px] rounded-full" style={{ backgroundColor: player.color }}></div>
+                            <Popover>
+                              <PopoverTrigger>
+                                <div className="w-[12px] h-[12px] rounded-full" style={{ backgroundColor: player.color }} />
+                              </PopoverTrigger>
+                              <PopoverContent>
+                                <TwitterPicker />
+                              </PopoverContent>
+                            </Popover>
 
                             {player.name}
 

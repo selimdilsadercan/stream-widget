@@ -12,3 +12,6 @@
 - [x] "npm i convex"
 - [x] "npx convex dev" to run convex
 - [x] add providers/convex-provider.tsx
+
+- [x] "npm i react-color"
+- [x] "npm i -D @types/react-color"
