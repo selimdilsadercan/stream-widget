@@ -10,6 +10,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@hello-pangea/dnd": "^16.5.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "convex": "^1.7.1",
