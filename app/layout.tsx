@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import ConvexProvider from "@/providers/convex-provider";
 const font = Inter({ subsets: ["latin"] });
+
+import ConvexProvider from "@/providers/convex-provider";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Stream Widget"
@@ -12,7 +14,10 @@ function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className={font.className}>
-        <ConvexProvider>{children}</ConvexProvider>
+        <ConvexProvider>
+          {children}
+          <Analytics />
+        </ConvexProvider>
       </body>
     </html>
   );

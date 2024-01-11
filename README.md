@@ -5,6 +5,8 @@
 - [x] remove page.tsx add standart page.tsx
 - [x] add /.prettierrc
 - [x] "npx husky-init" and "npm i" and add npm run lint as pre-commit
+- [ ] "npm i @vercel/analytics"
+- [ ] add Analytics to the /app/layout.tsx
 
 - [x] "npx shadcn-ui@latest init" to initialize shadcn
 - [x] html, body, :root { height: 100% } thing at app/globals.css
